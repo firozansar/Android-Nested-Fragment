@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments.fragment;
+package info.firozansari.nestedfragment.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.burnside.digital.nestedfragments.R;
+
+import info.firozansari.nestedfragment.R;
+
 
 /**
  * The child fragment is no different than any other fragment other than it is now being maintained by

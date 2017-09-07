@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments.fragment;
+package info.firozansari.nestedfragment.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.burnside.digital.nestedfragments.R;
+
+import info.firozansari.nestedfragment.R;
+
 
 public class ParentTabHostFragment extends Fragment {
 

@@ -1,12 +1,12 @@
-package com.burnside.digital.nestedfragments;
+package info.firozansari.nestedfragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 
-import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment;
-import com.burnside.digital.nestedfragments.fragment.SingleChildFragment;
+import info.firozansari.nestedfragment.fragment.ParentViewPagerFragment;
+import info.firozansari.nestedfragment.fragment.SingleChildFragment;
 
 public class TabHostFragmentActivity extends AppCompatActivity {
 

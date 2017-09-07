@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments;
+package info.firozansari.nestedfragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.burnside.digital.nestedfragments.fragment.ParentTabHostFragment;
-import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment;
-import com.burnside.digital.nestedfragments.fragment.TabHostLayoutFragment;
+import info.firozansari.nestedfragment.fragment.ParentTabHostFragment;
+import info.firozansari.nestedfragment.fragment.ParentViewPagerFragment;
+import info.firozansari.nestedfragment.fragment.TabHostLayoutFragment;
 
 public class NestListActivity extends AppCompatActivity implements OnItemClickListener {
 
