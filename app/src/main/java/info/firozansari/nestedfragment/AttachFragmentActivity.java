@@ -15,6 +15,8 @@ public class AttachFragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.attach_fragment);
+
         Bundle extras = getIntent().getExtras();
         String tag = extras.getString(FRAGMENT_TAG_KEY);
         String title = getString(extras.getInt(ACTIVITY_TITLE_KEY));
@@ -27,7 +29,7 @@ public class AttachFragmentActivity extends AppCompatActivity {
         if (fragment == null) {
             fragment = Fragment.instantiate(this, tag);
             FragmentTransaction ft = fm.beginTransaction();
-            ft.add(android.R.id.content, fragment, tag);
+            ft.add(R.id.main_content_frame, fragment, tag);
             ft.commit();
         }
     }
