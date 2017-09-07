@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import info.firozansari.nestedfragment.R;
 
@@ -24,13 +25,21 @@ public class TabHostLayoutFragment extends Fragment {
 
         Bundle arg1 = new Bundle();
         arg1.putInt(ChildFragment.POSITION_KEY, 1);
-        tabHost.addTab(tabHost.newTabSpec("ChildTag1").setIndicator("Child Fragment 1"),
+        tabHost.addTab(tabHost.newTabSpec("ChildTag1").setIndicator("Fragment 1"),
                 ChildFragment.class, arg1);
 
         Bundle arg2 = new Bundle();
         arg2.putInt(ChildFragment.POSITION_KEY, 2);
-        tabHost.addTab(tabHost.newTabSpec("ChildTag2").setIndicator("Child Fragment 2"),
+        tabHost.addTab(tabHost.newTabSpec("ChildTag2").setIndicator("Fragment 2"),
                 ChildFragment.class, arg2);
+
+        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+            View v = tabHost.getTabWidget().getChildAt(i);
+            v.setBackgroundResource(R.drawable.tabwidget_bg);
+
+            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            tv.setTextColor(getResources().getColor(R.color.colorPrimary));
+        }
 
         return root;
     }

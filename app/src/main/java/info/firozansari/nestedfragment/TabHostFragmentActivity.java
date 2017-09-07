@@ -19,10 +19,10 @@ public class TabHostFragmentActivity extends AppCompatActivity {
 
         tabHost.setup(this, getSupportFragmentManager(), R.layout.activity_nest_list);
 
-        tabHost.addTab(tabHost.newTabSpec("ParentViewPagerFragment").setIndicator("View Pager"),
+        tabHost.addTab(tabHost.newTabSpec("ParentViewPagerFragment").setIndicator("Pager Tab"),
                 ParentViewPagerFragment.class, null);
 
-        tabHost.addTab(tabHost.newTabSpec("SingleFragment").setIndicator("Single Fragment"),
+        tabHost.addTab(tabHost.newTabSpec("SingleFragment").setIndicator("Fragment Tab"),
                 SingleChildFragment.class, null);
     }
 
