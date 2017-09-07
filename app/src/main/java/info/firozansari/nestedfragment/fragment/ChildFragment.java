@@ -2,13 +2,13 @@ package info.firozansari.nestedfragment.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import info.firozansari.nestedfragment.MyAdapter;
 import info.firozansari.nestedfragment.R;
 
 
@@ -16,7 +16,7 @@ import info.firozansari.nestedfragment.R;
  * The child fragment is no different than any other fragment other than it is now being maintained by
  * a child FragmentManager.
  */
-public class ChildFragment extends Fragment implements OnClickListener {
+public class ChildFragment extends Fragment {
 
     public static final String POSITION_KEY = "FragmentPositionKey";
     private int position;
@@ -33,15 +33,14 @@ public class ChildFragment extends Fragment implements OnClickListener {
         position = getArguments().getInt(POSITION_KEY);
 
         View root = inflater.inflate(R.layout.fragment_child, container, false);
-        TextView textview = (TextView) root.findViewById(R.id.textViewPosition);
-        textview.setText(Integer.toString(position));
-        textview.setOnClickListener(this);
+        RecyclerView rv = (RecyclerView) root.findViewById(R.id.rv_recycler_view);
+        rv.setHasFixedSize(true);
+        MyAdapter adapter = new MyAdapter(new String[]{"test one", "test two", "test three", "test four", "test five" , "test six" , "test seven"});
+        rv.setAdapter(adapter);
 
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        rv.setLayoutManager(llm);
         return root;
     }
 
-    @Override
-    public void onClick(View v) {
-        Toast.makeText(v.getContext(), "Clicked Position: " + position, Toast.LENGTH_LONG).show();
-    }
 }
