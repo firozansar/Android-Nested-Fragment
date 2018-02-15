@@ -1,4 +1,4 @@
-package info.firozansari.nestedfragment;
+package info.firozansari.nestedfragment.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import info.firozansari.nestedfragment.R;
 import info.firozansari.nestedfragment.fragment.ParentTabHostFragment;
 import info.firozansari.nestedfragment.fragment.ParentViewPagerFragment;
 import info.firozansari.nestedfragment.fragment.TabHostLayoutFragment;

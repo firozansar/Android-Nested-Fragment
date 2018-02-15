@@ -1,9 +1,10 @@
-package info.firozansari.nestedfragment;
+package info.firozansari.nestedfragment.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 
+import info.firozansari.nestedfragment.R;
 import info.firozansari.nestedfragment.fragment.ParentViewPagerFragment;
 import info.firozansari.nestedfragment.fragment.SingleChildFragment;
 
