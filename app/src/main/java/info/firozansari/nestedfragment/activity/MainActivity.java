@@ -14,12 +14,13 @@ import info.firozansari.nestedfragment.fragment.ParentTabHostFragment;
 import info.firozansari.nestedfragment.fragment.ParentViewPagerFragment;
 import info.firozansari.nestedfragment.fragment.TabHostLayoutFragment;
 
-public class NestListActivity extends AppCompatActivity implements OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements OnItemClickListener {
 
-    public static final int FRAGMENT_WITH_VIEWPAGER_FRAGMENTS = 0;
-    public static final int FRAGMENT_WITH_TAB_HOST_XML = 1;
-    public static final int FRAGMENT_WITH_TAB_HOST = 2;
-    public static final int ACTIVITY_WITH_FRAGMENT_TAB_HOST = 3;
+    public static final int BASIC_FRAGMENT = 0;
+    public static final int FRAGMENT_WITH_VIEWPAGER_FRAGMENTS = 1;
+    public static final int FRAGMENT_WITH_TAB_HOST_XML = 2;
+    public static final int FRAGMENT_WITH_TAB_HOST = 3;
+    public static final int ACTIVITY_WITH_FRAGMENT_TAB_HOST = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,9 @@ public class NestListActivity extends AppCompatActivity implements OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
         switch (position) {
+            case BASIC_FRAGMENT:
+                startActivity(BasicFragmentActivity.newIntent(MainActivity.this));
+                break;
             case FRAGMENT_WITH_VIEWPAGER_FRAGMENTS:
                 startActivity(getIntent(ParentViewPagerFragment.TAG, R.string.viewpager_title));
                 break;
